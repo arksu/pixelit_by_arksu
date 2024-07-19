@@ -13,7 +13,7 @@ class pixelit {
     this.hideFromImg();
     //range between 0 to 100
     this.scale =
-      config.scale && config.scale > 0 && config.scale <= 50
+      config.scale && config.scale > 0 && config.scale <= 500
         ? config.scale * 0.01
         : 8 * 0.01;
     this.palette = config.palette || [
@@ -43,10 +43,10 @@ class pixelit {
 
   /** hide from image */
   hideFromImg() {
-    this.drawfrom.style.visibility = "hidden";
-    this.drawfrom.style.position = "fixed";
-    this.drawfrom.style.top = 0;
-    this.drawfrom.style.left = 0;
+    // this.drawfrom.style.visibility = "hidden";
+    // this.drawfrom.style.position = "fixed";
+    // this.drawfrom.style.top = 0;
+    // this.drawfrom.style.left = 0;
     return this;
   }
 
@@ -108,7 +108,7 @@ class pixelit {
    * @param {int} scale set pixelate scale [0...50]
    */
   setScale(scale) {
-    this.scale = scale > 0 && scale <= 50 ? scale * 0.01 : 8 * 0.01;
+    this.scale = scale > 0 && scale <= 500 ? scale * 0.01 : 8 * 0.01;
     return this;
   }
 
@@ -208,7 +208,7 @@ class pixelit {
     // Set temp canvas width/height & hide (fixes higher scaled cutting off image bottom)
     tempCanvas.width = this.drawto.width;
     tempCanvas.height = this.drawto.height;
-    tempCanvas.style.visibility = "hidden";
+    // tempCanvas.style.visibility = "hidden";
     tempCanvas.style.position = "fixed";
     tempCanvas.style.top = "0";
     tempCanvas.style.left = "0";
